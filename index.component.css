@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/**Typography */
+:root{
+    --blue:#001356;
+    --light-gray:#F4F4F4;
+    --gradient-blue:linear-gradient(to bottom,#001356a9,rgba(164, 182, 245, 0.151));
+    --light-blue:#4E6FE0;
+    --dark-gray:rgb(48, 48, 48);
+    --transition-250:250ms;
+}
+h2{
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+h3{
+    font-size: 32px;
+    font-weight: 400;
+}
+/**-------------- */
+
+/**NAV */
+nav {
+    width: 100%;
+    background-color: var(--light-gray);
+    position: fixed;
+}
+.logo-name h2{
+    color: var(--blue);
+    font-size: 24px;
+    padding:1rem 1rem;
+    text-transform: uppercase;
+}
+nav ul {
+    position: absolute;
+    display: flex;
+    margin: 1.2rem 1rem;
+    top: 0;
+    right: 0;
+    
+}
+nav li {
+    padding: 0 1rem;
+    list-style: none;
+}
+nav ul li a {
+    font-size: 18px;
+    color: var(--dark-gray);
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--blue);
+    top: 1.5rem;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: var(--transition-250); 
+}
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+/**---------------------- */
+/**CENTRAL IMG */
+.main-central-img{
+    background: var(--gradient-blue),url(https://i0.wp.com/comtuter.problog.dk/wp-content/uploads/2017/04/crud.png?fit=945%2C500);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+/**-------------------------- */
+.main-group-info{
+    width: 100%;
+    padding: 4rem 0;
+    background: var(--light-gray);
+    position: relative;
+    text-align: center;
+}
+.main-group-info h2{
+            color: var(--blue);
+            text-transform: uppercase;
+            padding: 2rem;
+}
+/**-------------------------------- */
+/**FOOTER */
+footer{
+    width: 100%;
+    height: 10rem;
+    background: var(--light-blue);
+    padding:2rem; 
+    text-align: center;
+    color: var(--dark-gray);
+}
+footer h3{
+    line-height: 65px;
+    
+}
+
+
+
+
+
+
+
+
